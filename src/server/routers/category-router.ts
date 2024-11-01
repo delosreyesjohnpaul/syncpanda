@@ -68,17 +68,17 @@ export const categoryRouter = router({
     return c.superjson({ categories: categoriesWithCounts })
   }),
 
-//   deleteCategory: privateProcedure
-//     .input(z.object({ name: z.string() }))
-//     .mutation(async ({ c, input, ctx }) => {
-//       const { name } = input
+  deleteCategory: privateProcedure
+    .input(z.object({ name: z.string() }))
+    .mutation(async ({ c, input, ctx }) => {
+      const { name } = input
 
-//       await db.eventCategory.delete({
-//         where: { name_userId: { name, userId: ctx.user.id } },
-//       })
+      await db.eventCategory.delete({
+        where: { name_userId: { name, userId: ctx.user.id } },
+      })
 
-//       return c.json({ success: true })
-//     }),
+      return c.json({ success: true })
+    }),
 
 //   createEventCategory: privateProcedure
 //     .input(

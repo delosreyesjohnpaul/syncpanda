@@ -2,7 +2,7 @@
 
 import { LoadingSpinner } from "@/components/loading-spinner"
 import { Button, buttonVariants } from "@/components/ui/button"
-// import { Modal } from "@/components/ui/modal"
+import { Modal } from "@/components/ui/modal"
 import { client } from "@/lib/client"
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query"
 import { format, formatDistanceToNow } from "date-fns"
@@ -24,17 +24,17 @@ export const DashboardPageContent = () => {
     },
   })
 
-//   const { mutate: deleteCategory, isPending: isDeletingCategory } = useMutation(
-//     {
-//       mutationFn: async (name: string) => {
-//         await client.category.deleteCategory.$post({ name })
-//       },
-//       onSuccess: () => {
-//         queryClient.invalidateQueries({ queryKey: ["user-event-categories"] })
-//         setDeletingCategory(null)
-//       },
-//     }
-//   )
+  const { mutate: deleteCategory, isPending: isDeletingCategory } = useMutation(
+    {
+      mutationFn: async (name: string) => {
+        await client.category.deleteCategory.$post({ name })
+      },
+      onSuccess: () => {
+        queryClient.invalidateQueries({ queryKey: ["user-event-categories"] })
+        setDeletingCategory(null)
+      },
+    }
+  )
 
   if (isEventCategoriesLoading) {
     return (
@@ -129,7 +129,7 @@ export const DashboardPageContent = () => {
         ))}
       </ul>
 
-      {/* <Modal
+      <Modal
         showModal={!!deletingCategory}
         setShowModal={() => setDeletingCategory(null)}
         className="max-w-md p-8"
@@ -160,7 +160,7 @@ export const DashboardPageContent = () => {
             </Button>
           </div>
         </div>
-      </Modal> */}
+      </Modal>
 
     </>
   )
