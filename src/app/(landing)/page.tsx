@@ -350,10 +350,10 @@ const Page = () => {
                 />
                 <div className="flex flex-col items-center sm:items-start">
                   <p className="font-semibold flex items-center">
-                    Kai Durant
+                    Kai Dong
                     <Icons.verificationBadge className="size-4 inline-block ml-1.5" />
                   </p>
-                  <p className="text-sm text-gray-600">@kdurant_</p>
+                  <p className="text-sm text-gray-600">@kaidg_</p>
                 </div>
               </div>
             </div>
