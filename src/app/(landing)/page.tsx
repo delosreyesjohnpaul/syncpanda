@@ -4,6 +4,8 @@ import { MaxWidthWrapper } from "../../components/max-width-wrapper";
 import { Check } from "lucide-react";
 import { ShinyButton } from "../../components/shiny-button";
 import { MockDiscordUI } from "@/components/mock-discord-ui";
+import { AnimatedList } from "@/components/ui/animated-list";
+import { DiscordMessage } from "@/components/discord-message";
 
 const  Page = () => (
   <>
@@ -49,13 +51,63 @@ const  Page = () => (
           <MaxWidthWrapper className="relative">
             <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
             <MockDiscordUI>
-
+              <AnimatedList>
+                <DiscordMessage
+                      avatarSrc="/brand-asset-profile-picture.png"
+                      avatarAlt="SyncPanda Avatar"
+                      username="SyncPanda"
+                      timestamp="Today at 12:35PM"
+                      badgeText="SignUp"
+                      badgeColor="#43b581"
+                      title="👤 New user signed up"
+                      content={{
+                        name: "Mateo Ortiz",
+                        email: "m.ortiz19@gmail.com",
+                      }}
+                    />
+                    <DiscordMessage
+                      avatarSrc="/brand-asset-profile-picture.png"
+                      avatarAlt="SyncPanda Avatar"
+                      username="SyncPanda"
+                      timestamp="Today at 12:35PM"
+                      badgeText="Revenue"
+                      badgeColor="#faa61a"
+                      title="💰 Payment received"
+                      content={{
+                        amount: "$49.00",
+                        email: "zoe.martinez2001@email.com",
+                        plan: "PRO",
+                      }}
+                    />
+                    <DiscordMessage
+                      avatarSrc="/brand-asset-profile-picture.png"
+                      avatarAlt="SyncPanda Avatar"
+                      username="SyncPanda"
+                      timestamp="Today at 5:11AM"
+                      badgeText="Milestone"
+                      badgeColor="#5865f2"
+                      title="🚀 Revenue Milestone Achieved"
+                      content={{
+                        recurringRevenue: "$5.000 USD",
+                        growth: "+8.2%",
+                      }}
+                    />
+              </AnimatedList>
             </MockDiscordUI>
             </div>
           </MaxWidthWrapper>
       </div>
     </section>
-    <section></section>
+    <section className="relative py-24 sm:py-32 bg-brand-25">
+    <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
+      <div>
+        <h2 className="text-center text-base/7 font-semibold text-brand-600">
+          Intuitive Monitoring
+        </h2>
+          <Heading>Stay ahead with real-time insights</Heading>
+      </div>
+    </MaxWidthWrapper>
+    </section>
     <section></section>
   </>
 )
