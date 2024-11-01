@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 import { MaxWidthWrapper } from "./max-width-wrapper"
 import { SignOutButton } from "@clerk/nextjs"
@@ -17,7 +16,7 @@ export const Navbar = async () => {
             Sync<span className="text-brand-700">Panda</span>
           </Link>
 
-          {/* <div className="h-full flex items-center space-x-4">
+          <div className="h-full flex items-center space-x-4">
             {user ? (
               <>
                 <SignOutButton>
@@ -70,7 +69,7 @@ export const Navbar = async () => {
                 </Link>
               </>
             )}
-          </div> */}
+          </div>
         </div>
       </MaxWidthWrapper>
     </nav>
