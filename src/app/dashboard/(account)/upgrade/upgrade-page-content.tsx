@@ -69,7 +69,7 @@ export const UpgradePageContent = ({ plan }: { plan: Plan }) => {
           <div>
             <p className="text-2xl font-bold">
               {usageData?.categoriesUsed || 0} of{" "}
-              {usageData?.categoriesLimit.toLocaleString() || 10}
+              {usageData?.categoriesLimit.toLocaleString() || 20}
             </p>
             <p className="text-xs/5 text-muted-foreground">Active categories</p>
           </div>

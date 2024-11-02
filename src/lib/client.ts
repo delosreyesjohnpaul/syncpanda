@@ -1,3 +1,4 @@
+
 import { AppType } from "@/server"
 import { hc } from "hono/client"
 import { HTTPException } from "hono/http-exception"
@@ -5,8 +6,15 @@ import { StatusCode } from "hono/utils/http-status"
 import superjson from "superjson"
 
 const getBaseUrl = () => {
+  // browser should use relative path
+  if (typeof window !== "undefined") {
+    return ""
+  }
+
   return process.env.NODE_ENV === "development"
     ? "http://localhost:3000/"
+    : process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
     : "https://<YOUR_DEPLOYED_WORKER_URL>/"
 }
 
