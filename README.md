@@ -70,5 +70,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any questions or suggestions, please reach out to [your email or contact info].
 
 ---
-
-Feel free to adjust the content as needed.
