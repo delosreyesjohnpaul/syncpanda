@@ -5,7 +5,22 @@ meta {
 }
 
 post {
-  url: http://localhost:3000/api/v1/events
-  body: none
+  url: https://syncpanda.vercel.app/api/v1/events/sale
+  body: json
   auth: none
+}
+
+headers {
+  Authorization: Bearer cm2yqowse000113y6ki40651j
+}
+
+body:json {
+  {
+    "category": "sale",
+    "fields": {
+      "amount": 49,
+      "plan": "PRO"
+    }
+  }
+  
 }
