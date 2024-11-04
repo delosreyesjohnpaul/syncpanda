@@ -125,7 +125,7 @@ export const MockDiscordUI = ({ children }: PropsWithChildren) => {
             <div className="relative">
               <Image
                 src="/brand-asset-profile-picture.png"
-                alt="PingPanda Avatar"
+                alt="SyncpaPanda Avatar"
                 width={40}
                 height={40}
                 className="object-cover rounded-full mr-3"
