@@ -45,11 +45,9 @@ const Sidebar = ({ onClose }: { onClose?: () => void }) => {
   return (
     <div className="space-y-4 md:space-y-6 relative z-20 flex flex-col h-full">
       {/* logo */}
-        <Link href="/" className="cursor-pointer">
         <p className="hidden sm:block text-lg/7 font-semibold text-brand-900">
           Sync<span className="text-brand-700">Panda</span>
         </p>
-      </Link>
 
       {/* navigation items */}
       <div className="flex-grow">
